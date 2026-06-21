@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">QurbanCare</string>
+
+            <string-array name="role_options">
+                <item>Admin</item>
+                <item>Panitia</item>
+                <item>Peserta</item>
+            </string-array>
+
+    <string-array name="opsi_kuota">
+        <item>7 Orang (Standar)</item>
+        <item>5 Orang (Khusus)</item>
+    </string-array>
+
+
+</resources>

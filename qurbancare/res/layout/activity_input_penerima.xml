@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F5F2E9">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah Penerima Baru"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:textColor="#2D5A27"/>
+
+    <EditText
+        android:id="@+id/etNama"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nama Lengkap"
+        android:background="@drawable/bg_search_rounded"
+        android:paddingHorizontal="15dp"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/etAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Alamat (RT/RW)"
+        android:background="@drawable/bg_search_rounded"
+        android:paddingHorizontal="15dp"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/etPaket"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Jenis Paket (Misal: Paket 1)"
+        android:background="@drawable/bg_search_rounded"
+        android:paddingHorizontal="15dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnSimpanData"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Simpan ke Database"
+        android:backgroundTint="#2D5A27"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>

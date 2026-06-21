@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Nota Pengeluaran"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2D5A27"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/ivPreviewNota"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:background="#EEEEEE"
+        android:src="@android:drawable/ic_menu_camera" />
+
+    <Button
+        android:id="@+id/btnAmbilFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buka Kamera"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#588157"/>
+
+    <EditText
+        android:id="@+id/etNamaBarang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Barang (Misal: Pakan Sapi)"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/etHargaNota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total Harga (Misal: 50000)"
+        android:inputType="number"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btnSimpanNota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan &amp; Upload"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#2D5A27"/>
+
+</LinearLayout>

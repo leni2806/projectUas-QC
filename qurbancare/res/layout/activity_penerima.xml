@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgFullBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/frame" />
+
+    <ImageButton
+        android:id="@+id/btnBackPenerima"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="130dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#000000" />
+
+    <TextView
+        android:id="@+id/tvJudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Penerima"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/btnBackPenerima"
+        app:layout_constraintStart_toEndOf="@id/btnBackPenerima"
+        app:layout_constraintTop_toTopOf="@id/btnBackPenerima" />
+
+    <EditText
+        android:id="@+id/etCariNamaPenerima"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/search_bg"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="10dp"
+        android:elevation="4dp"
+        android:hint="Cari nama penerima..."
+        android:paddingHorizontal="15dp"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tvJudul" />
+
+    <GridLayout
+        android:id="@+id/layoutDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:columnCount="2"
+        app:layout_constraintTop_toBottomOf="@id/etCariNamaPenerima">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#F5EEDA">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="10dp" android:orientation="horizontal" android:gravity="center_vertical">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/btn_penerima" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tvTotalDashboard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textStyle="bold" android:textSize="14sp" android:textColor="#000"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPesantren"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#F5EEDA">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="10dp" android:orientation="horizontal" android:gravity="center_vertical">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/school" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pesantren" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tvPesantrenDashboard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textStyle="bold" android:textSize="14sp" android:textColor="#000"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDhuafa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#F5EEDA">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="10dp" android:orientation="horizontal" android:gravity="center_vertical">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/dhuafa" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dhuafa" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tvDhuafaDashboard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textStyle="bold" android:textSize="14sp" android:textColor="#000"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardWarga"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#F5EEDA">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="10dp" android:orientation="horizontal" android:gravity="center_vertical">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/btn_peserta" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Warga" android:textSize="9sp"/>
+                    <TextView android:id="@+id/tvWargaDashboard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textStyle="bold" android:textSize="14sp" android:textColor="#000"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardKupon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_columnSpan="2"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#E8F5E9">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="10dp" android:orientation="horizontal" android:gravity="center_vertical">
+                <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/btn_distribusi" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="Lihat Kupon Digital" android:textStyle="bold" android:textColor="#1E7A4C" android:textSize="13sp"/>
+                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@android:drawable/ic_media_play" app:tint="#1E7A4C" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutTabFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_white_rounded"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutDashboard">
+        <TextView android:id="@+id/filterSemua" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Semua" android:textSize="11sp" android:textColor="#333"/>
+        <TextView android:id="@+id/filterWarga" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Warga" android:textSize="11sp" android:textColor="#333"/>
+        <TextView android:id="@+id/filterDhuafa" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Dhuafa" android:textSize="11sp" android:textColor="#333"/>
+        <TextView android:id="@+id/filterPesantren" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Pesantren" android:textSize="11sp" android:textColor="#333"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPenerima"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutTabFilter" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:src="@android:drawable/ic_menu_camera"
+        app:backgroundTint="#1E7A4C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="#FFFFFF"
+        app:fabSize="normal" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabImportExcel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:src="@android:drawable/ic_menu_share"
+        app:backgroundTint="#A7C7E7"
+        app:layout_constraintBottom_toTopOf="@id/fabTambah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#FFFFFF"
+        app:fabSize="mini" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabTambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#1E7A4C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#FFFFFF"
+        app:fabSize="normal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

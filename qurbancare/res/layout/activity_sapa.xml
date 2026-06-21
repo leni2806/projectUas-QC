@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/frame">
+
+    <ImageView
+        android:id="@+id/btnProfile"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="24dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:src="@drawable/ic_profil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="175dp"
+        android:text="Assalamualaikum sahabat!"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppinsbold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGreeting">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerBanner"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMenuUtama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="6dp"
+                app:layout_constraintTop_toBottomOf="@+id/viewPagerBanner">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:padding="20dp"
+                    android:useDefaultMargins="true"
+                    android:alignmentMode="alignMargins">
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:paddingVertical="12dp">
+                        <ImageButton android:id="@+id/btnHewan" android:layout_width="60dp" android:layout_height="60dp" android:background="@drawable/btn_hewan" android:scaleType="fitCenter" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Hewan" android:textSize="12sp" android:textColor="#333333" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:paddingVertical="12dp">
+                        <ImageButton android:id="@+id/btnPanitia" android:layout_width="60dp" android:layout_height="60dp" android:background="@drawable/btn_panitia" android:scaleType="fitCenter" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Panitia" android:textSize="12sp" android:textColor="#333333" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:paddingVertical="12dp">
+                        <ImageButton android:id="@+id/btnPeserta" android:layout_width="60dp" android:layout_height="60dp" android:background="@drawable/btn_peserta" android:scaleType="fitCenter" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Peserta" android:textSize="12sp" android:textColor="#333333" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:paddingVertical="12dp">
+                        <ImageButton android:id="@+id/btnDistribusi" android:layout_width="60dp" android:layout_height="60dp" android:background="@drawable/btn_distribusi" android:scaleType="fitCenter" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Distribusi" android:textSize="12sp" android:textColor="#333333" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:paddingVertical="12dp">
+                        <ImageButton android:id="@+id/btnPenerima" android:layout_width="60dp" android:layout_height="60dp" android:background="@drawable/btn_penerima" android:scaleType="fitCenter" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Penerima" android:textSize="12sp" android:textColor="#333333" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:paddingVertical="12dp">
+                        <ImageButton android:id="@+id/btnPembayaran" android:layout_width="60dp" android:layout_height="60dp" android:background="@drawable/btn_pembayaran" android:scaleType="fitCenter" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Keuangan" android:textSize="12sp" android:textColor="#333333" />
+                    </LinearLayout>
+                </GridLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnChatAi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="#E8F5E9"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/cardMenuUtama">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                    <ImageView android:layout_width="45dp" android:layout_height="45dp" android:src="@android:drawable/ic_menu_help" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tanya QurbanCare AI" android:textColor="#2E7D32" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Asisten pintar informasi kurban" android:textColor="#4CAF50" android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnScanKeramaian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="#E0F2F1"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/btnChatAi">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                    <ImageView android:layout_width="45dp" android:layout_height="45dp" android:src="@android:drawable/ic_menu_camera" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monitor Keramaian" android:textColor="#00695C" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cek kepadatan lokasi via Kamera" android:textColor="#00897B" android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvLabelPojok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pojok Info Qurban"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#2D5A27"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                app:layout_constraintTop_toBottomOf="@id/btnScanKeramaian"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingHorizontal="20dp"
+                android:clipToPadding="false"
+                android:scrollbars="none"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelPojok">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardApaItuQurban"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardCornerRadius="16dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="110dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/apa"
+                                android:background="#F0F0F0"/>
+                            <LinearLayout android:padding="12dp"
+                                android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apa Itu Qurban?" android:textStyle="bold" android:textSize="13sp" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ketahui sejarah dan makna ibadah kurban bagi kita..." android:textSize="11sp" android:textColor="#666" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardTipsHewan"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardCornerRadius="16dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                            <ImageView android:layout_width="match_parent" android:layout_height="110dp" android:scaleType="centerCrop" android:src="@drawable/tips" android:background="#F0F0F0"/>
+                            <LinearLayout android:padding="12dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tips Pilih Hewan" android:textStyle="bold" android:textSize="13sp" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cara mudah membedakan sapi sehat untuk kurban..." android:textSize="11sp" android:textColor="#666" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="#F3EFE0"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:baselineAligned="false">
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:stretchColumns="1">
+            <TableRow android:layout_marginBottom="6dp">
+                <TextView android:text="Nama" android:textSize="11sp" android:layout_width="60dp"/>
+                <TextView android:id="@+id/tvNama" android:textSize="11sp" android:textStyle="bold"
+                    android:background="@drawable/bg_white_field" android:paddingHorizontal="6dp" />
+            </TableRow>
+            <TableRow android:layout_marginBottom="6dp">
+                <TextView android:text="Kategori" android:textSize="11sp" android:layout_width="60dp"/>
+                <TextView android:id="@+id/tvKategori" android:textSize="11sp"
+                    android:background="@drawable/bg_white_field" android:paddingHorizontal="6dp" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Alamat" android:textSize="11sp" android:layout_width="60dp"/>
+                <TextView android:id="@+id/tvAlamat" android:textSize="11sp"
+                    android:background="@drawable/bg_white_field" android:paddingHorizontal="6dp" />
+            </TableRow>
+        </TableLayout>
+
+        <View android:layout_width="8dp" android:layout_height="match_parent"/>
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:stretchColumns="1">
+            <TableRow android:layout_marginBottom="6dp">
+                <TextView android:text="Paket" android:textSize="11sp" android:layout_width="60dp"/>
+                <TextView android:id="@+id/tvPaket" android:textSize="11sp"
+                    android:background="@drawable/bg_white_field" android:paddingHorizontal="6dp" />
+            </TableRow>
+            <TableRow android:layout_marginBottom="6dp">
+                <TextView android:text="Status_ambil" android:textSize="11sp" android:layout_width="60dp"/>
+                <TextView android:id="@+id/tvStatus" android:textSize="10sp" android:textStyle="bold"
+                    android:background="@drawable/bg_status_label" android:paddingHorizontal="8dp"
+                    android:textColor="#FFFFFF" android:gravity="center" />
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Petugas" android:textSize="11sp" android:layout_width="60dp"/>
+                <TextView android:id="@+id/tvPetugas" android:textSize="11sp"
+                    android:background="@drawable/bg_white_field" android:paddingHorizontal="6dp" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

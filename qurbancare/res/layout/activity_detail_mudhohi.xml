@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_bottom_sheet">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:background="#DDDDDD"
+        android:layout_marginBottom="20dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        android:layout_marginBottom="16dp">
+        <!-- Cari bagian ImageView di dalam CardView kamu dan ganti menjadi ini -->
+        <ImageView
+            android:id="@+id/detailGambar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_launcher_background" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/detailNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pekurban"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="#2D3436"/>
+
+    <TextView
+        android:id="@+id/detailHewan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sapi Bali"
+        android:textColor="#2E7D32"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="16sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        android:layout_marginVertical="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kelamin"
+                android:textSize="12sp"
+                android:textColor="#636E72"/>
+            <TextView
+                android:id="@+id/detailGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jantan"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="#2D3436"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Umur"
+                android:textSize="12sp"
+                android:textColor="#636E72"/>
+            <TextView
+                android:id="@+id/detailUmur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.5 Tahun"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="#2D3436"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Harga Paket"
+        android:textSize="12sp"
+        android:textColor="#636E72"/>
+    <TextView
+        android:id="@+id/detailHarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp 3.500.000"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="#E67E22"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Informasi Tambahan"
+        android:textSize="12sp"
+        android:textColor="#636E72"/>
+    <TextView
+        android:id="@+id/detailKeterangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keterangan berat dan detail lainnya."
+        android:textSize="14sp"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="#2D3436"
+        android:layout_marginTop="2dp"/>
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Tutup"
+        android:backgroundTint="#1E7A4C"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/poppinssemibold"/>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+        <color name="green_header">#1E7A4C</color>
+        <color name="bg_content">#F5F1E8</color>
+        <color name="gray_circle">#9E9E9E</color>
+    <color name="green_progress">#1E7A4C</color>
+    <color name="gray_progress_bg">#E0E0E0</color>
+    <color name="price_color">#5D3737</color>
+    </resources>

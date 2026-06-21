@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Hewan Qurban"
+            android:textSize="22sp"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="#1E7A4C"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nama Hewan (Contoh: Sapi Limosin A)"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/etHarga"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Harga (Angka saja, misal: 25000000)"
+            android:inputType="number"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/etBerat"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Berat (Contoh: 300 - 450kg)"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/etDeskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Deskripsi Lengkap..."
+            android:gravity="top"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Foto Hewan (Pilih salah satu)"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp">
+                <ImageView
+                    android:id="@+id/ivPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo"
+                    android:background="#E0E0E0"/>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnPilihGambar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="AMBIL FOTO"
+                android:backgroundTint="#636E72"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etLinkGambar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Atau tempel Link Gambar (URL)"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Jenis"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgJenis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp">
+            <RadioButton android:id="@+id/rbSapi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sapi" android:checked="true"/>
+            <RadioButton android:id="@+id/rbKambing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kambing" android:layout_marginStart="30dp"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="SIMPAN KE DATABASE"
+            android:backgroundTint="#1E7A4C"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</ScrollView>
